@@ -58,3 +58,6 @@ streamlit.dataframe(my_data_rows)
 #Adding fruits to the list
 fruit_choice = streamlit.text_input('What fruit would you like to add?','jackfruit')
 streamlit.write('Thanks for adding ', fruit_choice)
+
+#After testing the SQL in Snowflake, copy it into your streamlit file and change the word "test" to "from streamlit" so you know where the row comes from. 
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
